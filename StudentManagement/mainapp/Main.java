@@ -16,7 +16,7 @@ public class Main {
         return null;
     }
     
-    // Fixed: Changed return type to void, and parameter to 'students' to match your code inside
+    
     public static void sortStudentsByName(Student[] students, int count){
         for (int i = 0; i < count - 1; i++){
             for (int j = 0; j < count - i - 1; j++){
@@ -30,10 +30,10 @@ public class Main {
         System.out.println("Students have been sorted alphabetically by name.");
     }
     
-    // Fixed: Added the main method here! Everything below is now safely inside it.
+    
     public static void main(String[] args) {
         
-        // Fixed: Instantiated the scanner so you can actually use it
+        
         Scanner scanner = new Scanner(System.in);
         
         Student[] students = new Student[100];
@@ -52,16 +52,14 @@ public class Main {
             System.out.print("\nSelect an option: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // consume the leftover newline
+            scanner.nextLine(); 
             
             switch (choice){
                 
                 case 1: 
                     System.out.print("Enter Student ID: ");
-                    // Fixed: Added parentheses to nextLine()
                     String id = scanner.nextLine(); 
                     System.out.print("Enter Student Name: ");
-                    // Fixed: Capitalized L and added parentheses
                     String name = scanner.nextLine(); 
                     
                     students[studentCount] = new Student(id, name);
